@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Design by Ryan Matthew Miltenberger</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!-- <div class="bordertop"></div> -->
+        <div class="header-content">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/header_logo.svg" alt="Ryan Matthew Miltenberger Logo">
+                </a>
+            </div>
+            <nav class="header-links">
+                <a href="index.html">Illustration</a>
+                <a href="bio.html">About</a>
+                <a href="mailto:madeby.ryanmatthew@gmail.com">Contact</a>
+                <a href="https://kidcali.co">Blog</a>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="gallery">
+            <!-- Image gallery items with loading optimization -->
+            <img src="images/001_axolotl.jpg" alt="Axolotyl Vector" 
+                 loading="lazy" onclick="openModal('images/001_axolotl.jpg')">
+            <img src="images/002_meditating-figure_alegria.png" alt="Levitation" loading="lazy" onclick="openModal('images/002_meditating-figure_alegria.png')">
+            <img src="images/003_Thought_Spotting.jpg" alt="Thought Spotting" onclick="openModal('images/003_Thought_Spotting.jpg')">
+            <img src="images/004_footprints.png" alt="Footprints" onclick="openModal('images/004_footprints.png')">
+            <img src="images/005_ContraDiction.png" alt="ContraDiction" onclick="openModal('images/005_ContraDiction.png')">
+            <img src="images/006_not-going-anywhere.jpg" alt="Not Going Anywhere" onclick="openModal('images/006_not-going-anywhere.jpg')">
+            <img src="images/007_hangry-ghost.jpg" alt="Hangry Ghost" onclick="openModal('images/007_hangry-ghost.jpg')">
+            <img src="images/008_out-of-the-box.jpg" alt="Out of the Box" onclick="openModal('images/008_out-of-the-box.jpg')">
+            <img src="images/009_legs.jpg" alt="Strange Legs" onclick="openModal('images/009_legs.jpg')">
+            <img src="images/010_selfportrait.jpg" alt="Self Portrait" onclick="openModal('images/010_selfportrait.jpg')">
+            <img src="images/011_atthebeach.jpg" alt="A Walk On The Beach" onclick="openModal('images/011_atthebeach.jpg')">
+            <img src="images/012_iamastrangeloop.jpg" alt="I am a strange loop/businessman ouroboros" onclick="openModal('images/012_iamastrangeloop.jpg')">
+            <img src="images/013_starman.gif" alt="Starman" onclick="openModal('images/013_starman.gif')">
+            <img src="images/014_loosenup.gif" alt="Loosen Up" onclick="openModal('images/014_loosenup.gif')">
+            <img src="images/015_juicebox.gif" alt="Juice Box" onclick="openModal('images/015_juicebox.gif')">
+            <img src="images/016_CircleExperiments.jpg" alt="Abstract Art: Sideways Sunset" onclick="openModal('images/016_CircleExperiments.jpg')">
+            <img src="images/017_dothework.jpg" alt="Word Art: Do The Work" onclick="openModal('images/017_dothework.jpg')">
+            <img src="images/018_teardrop-loop.gif" alt="Looping Animation" onclick="openModal('images/018_teardrop-loop.gif')">
+        </div>
+    </main>
+
+    <div class="modal" id="myModal" role="dialog" aria-modal="true">
+        <button class="close" onclick="closeModal()" aria-label="Close modal">×</button>
+        <img class="modal-content" id="modalImg" alt="">
+    </div>
+
+    <footer>
+    <footer>
+        <br>Text, Images and WinterSquash Regular &#169; Ryan Miltenberger, 2024
+        <!-- <br>Menu links in 
+        <a href="https://kottke.org/plus/type/silkscreen/">
+        Silkscreen</a>, created by 
+        <a href="https://kottke.org/">
+        Jason Kottke</a> -->
+        <br>Text set in WinterSquash Regular, created by Yours, Truly
+        <br>All Rights Reserved
+    </footer>
+
+    <script>
+        // Enhanced modal functionality
+        function openModal(imageSrc) {
+            const modal = document.getElementById("myModal");
+            const modalImg = document.getElementById("modalImg");
+            modal.style.display = "block";
+            modalImg.src = imageSrc;
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+
+            // Add keyboard support
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeModal();
+                }
+            });
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("myModal");
+            modal.style.display = "none";
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-toggle')?.addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.header-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Design by Ryan Matthew Miltenberger</title>
+	<link rel="stylesheet" href="styles.css">
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div id="header">
+		<div class="bordertop"></div>
+		<div id="logo">
+			<a href="index.html"><img src="images/header_logo.svg"></a>
+		</div>
+		<div id="header-links">
+			<a href="illustration.html">Illustration</a>
+		<!--
+			<a href="">Type</a>
+			<a href="poetry.html">Poetry</a>
+			<a href="bio.html">Bio</a>
+		-->
+			<a href="mailto:madeby.ryanmatthew@gmail.com">Contact</a>
+			<a href="https://kidcali.co">Blog</a>
+		</div>
+	</div>
+	<div class="container">
+		<div class="gallery">
+		    <img src="images/axolotl.jpg" alt="Axolotyl Vector" onclick="openModal('images/axolotl.jpg')">
+		    <img src="images/meditating-figure_alegria.png" alt="Levitation" onclick="openModal('images/meditating-figure_alegria.png')">
+		    <img src="images/Thought_Spotting.jpg" alt="Thought Spotting" onclick="openModal('images/Thought_Spotting.jpg')">
+		    <img src="images/legs.jpg" alt="Strange Legs" onclick="openModal('images/legs.jpg')">
+			<img src="images/footprints.png" alt="Footprints" onclick="openModal('images/footprints.png')">
+			<img src="images/ContraDiction.png" alt="ContraDiction" onclick="openModal('images/ContraDiction.png')">
+		</div>
+	</div>
+	<div id="myModal" class="modal">
+  <span class="close" onclick="closeModal()">X</span>
+  <img class="modal-content" id="modalImg">
+  </div>
+  	<footer>
+		<br>Menu links in 
+		<a href="https://kottke.org/plus/type/silkscreen/">
+		Silkscreen</a>, created by 
+		<a href="https://kottke.org/">
+		Jason Kottke</a>
+		<br>Text set in WinterSquash Regular, created by me
+		<br>Text, Images and WinterSquash Regular &#169; Ryan Miltenberger, 2024
+		<br>All Rights Reserved
+	</footer>
+<script>
+  function openModal(imageSrc) {
+    var modal = document.getElementById("myModal");
+    var modalImg = document.getElementById("modalImg");
+    modal.style.display = "block";
+    modalImg.src = imageSrc;
+  }
+
+  function closeModal() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
+  }
+</script>
+</body>
+</html>

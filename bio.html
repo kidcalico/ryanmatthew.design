@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Design by Ryan Matthew Miltenberger</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!-- <div class="bordertop"></div> -->
+        <div class="header-content">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/header_logo.svg" alt="Ryan Matthew Miltenberger Logo">
+                </a>
+            </div>
+            <nav class="header-links">
+                <a href="index.html">Illustration</a>
+                <a href="bio.html">About</a>
+                <a href="mailto:madeby.ryanmatthew@gmail.com">Contact</a>
+                <a href="https://kidcali.co">Blog</a>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="bio">
+			<p>Offering whimsical ideation and organic execution, taking pride in honest imperfection, yet always striving for better.</p>
+			<p>Ryan is an illustrator, designer, and explorer of the inner landscape (along with a bit of the world). Seeking simple expression of complex thoughts, Ryan embraces a multitude of media in pursuit of their expression, mostly through digital painting, vectors and animation. He is getting into typography as well! This paragraph is set in WinterSquash Regular, his first full fledged experiment with typeface design. (I know, the kerning needs work.)</p>
+			<p>Ryan is always interested in working with forward thinking businesses who employ a humanist stance in their practices. If you think we might be compatible, don't hesitate to shoot me an <a href="mailto:madeby.ryanmatthew@gmail.com" style="text-decoration: underline;">Email</a>.</p> 
+			<p>Free from artificial intelligence. (Until the robots take over, at least.)</p>
+			<p>I look forward to hearing from you!</p>
+		</div>
+    </main>
+
+    <div class="modal" id="myModal" role="dialog" aria-modal="true">
+        <button class="close" onclick="closeModal()" aria-label="Close modal">×</button>
+        <img class="modal-content" id="modalImg" alt="">
+    </div>
+
+    <footer>
+    <footer>
+        <br>Text, Images and WinterSquash Regular &#169; Ryan Miltenberger, 2024
+        <!-- <br>Menu links in 
+        <a href="https://kottke.org/plus/type/silkscreen/">
+        Silkscreen</a>, created by 
+        <a href="https://kottke.org/">
+        Jason Kottke</a> -->
+        <br>Text set in WinterSquash Regular, created by Yours, Truly
+        <br>All Rights Reserved
+    </footer>
+
+    <script>
+        // Enhanced modal functionality
+        function openModal(imageSrc) {
+            const modal = document.getElementById("myModal");
+            const modalImg = document.getElementById("modalImg");
+            modal.style.display = "block";
+            modalImg.src = imageSrc;
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+
+            // Add keyboard support
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeModal();
+                }
+            });
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("myModal");
+            modal.style.display = "none";
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-toggle')?.addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.header-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Design by Ryan Matthew Miltenberger</title>
+	<link rel="stylesheet" href="styles.css">
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div id="header">
+			<div class="bordertop"></div>
+			<div id="logo">
+				<a href="index.html"><img src="images/header_logo.svg"></a>
+			</div>
+			<div id="header-links">
+				<a href="illustration.html">Illustration</a>
+			<!--
+				<a href="">Type</a>
+				<a href="poetry.html">Poetry</a>
+				<a href="bio.html">Bio</a>
+			-->
+				<a href="mailto:madeby.ryanmatthew@gmail.com">Contact</a>
+				<a href="https://kidcali.co">Blog</a>
+			</div>
+		</div>
+	</header>
+	<section>
+		<div class="container">
+			<div class="gallery">
+		    <img src="images/axolotl.jpg" alt="Axolotyl Vector" onclick="openModal('images/axolotl.jpg')">
+		    <div id="untitled_01">
+						<br>Dissolve your defences
+						<br>And break through pretences
+						<br>It's not where you've been
+						<br>It's who you are now
+						<br>
+						<br>A face in a crowd
+						<br>A hole in a cloud
+						<br>A breath in a moment
+						<br>A word said aloud
+		    </div>
+		    <img src="images/meditating-figure_alegria.png" alt="Levitation" onclick="openModal('images/meditating-figure_alegria.png')">
+		    <div id="untitled_02">
+		    	<br>Living for moments
+					<br>These segments in time
+					<br>Birds, leaves and breezes
+					<br>Drift through my mind
+					<br>
+					<br>Melt
+					<br>Into figments
+					<br>In grooves
+					<br>Of the brain
+					<br>
+					<br>Release me
+					<br>Remove me
+					<br>And yet I remain 
+		    </div>
+		    <img src="images/Thought_Spotting.jpg" alt="Thought Spotting" onclick="openModal('images/Thought_Spotting.jpg')">
+		    <div id="untitled_03">
+		    	<br>If you can
+		    	<br>
+		    	<br>Simplify your
+		    	<br>Circumstance
+		    	<br>And increase
+		    	<br>Your intention
+		    	<br>
+		    	<br>You might
+		    	<br>Find yourself
+		    	<br>Drifting
+		    	<br>
+		    	<br>Living in
+		    	<br>Suspension
+		    </div>
+		    <img src="images/legs.jpg" alt="Strange Legs" onclick="openModal('images/legs.jpg')">
+		    <div id="untitled_04">
+		    	<br>Familiar but forgotten spaces
+		    	<br>Dimming light
+		    	<br>It gently traces
+		    	<br>Patterns shift
+		    	<br>To frequencies
+		    	<br>Balance through
+		    	<br>The seven seas
+		    	<br>Or seven trillion
+		    	<br>Liquid places
+		    	<br>Reminding of
+		    	<br>Sublime embraces
+		    	<br>Let it go
+		    	<br>Let it be
+		    	<br>Expand into
+		    	<br>Reality
+		    </div>
+		    <img src="images/footprints.png" alt="Footprints" onclick="openModal('images/footprints.png')">
+		    <div id="untitled_05">
+		    	<br>Taking stock of moments past
+		    	<br>I am now, here at last
+		    	<br>Grounding, slowing, living free
+		    	<br>This slice of time is all I see
+		    	<br>Reaching out through endless space
+		    	<br>This life is naught
+		    	<br>But grace
+		    </div>
+		    <img src="images/ContraDiction.png" alt="ContraDiction" onclick="openModal('images/ContraDiction.png')">
+		    <div id="untitled_06">
+		    	<br>It's okay
+		    	<br>You were never
+		    	<br>Not here
+		    	<br>Not now
+		    </div>
+			</div>
+		</div>
+		<div id="myModal" class="modal">
+	  <span class="close" onclick="closeModal()">&times;</span>
+	  <img class="modal-content" id="modalImg">
+	  </div>
+	</section>
+	<footer>
+		<br>Menu links in 
+		<a href="https://kottke.org/plus/type/silkscreen/">
+		Silkscreen</a>, created by 
+		<a href="https://kottke.org/">
+		Jason Kottke</a>
+		<br>Text set in WinterSquash Regular, created by me
+		<br>Text, Images and WinterSquash Regular &#169; Ryan Miltenberger, 2024
+		<br>All Rights Reserved
+	</footer>
+<script>
+  function openModal(imageSrc) {
+    var modal = document.getElementById("myModal");
+    var modalImg = document.getElementById("modalImg");
+    modal.style.display = "block";
+    modalImg.src = imageSrc;
+  }
+
+  function closeModal() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
+  }
+</script>
+</body>
+</html>
