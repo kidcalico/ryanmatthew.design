@@ -19,6 +19,8 @@
                 </a>
             </div>
             <nav class="header-links">
+                <span>Change theme:</span>
+                <button id="theme-toggle"></button>
                 <a href="index.html">Illustration</a>
                 <a href="bio.html">About</a>
                 <a href="mailto:madeby.ryanmatthew@gmail.com">Contact</a>
@@ -63,52 +65,9 @@
     </div>
 
     <footer>
-    <footer>
-        <br>Text, Images and WinterSquash Regular &#169; Ryan Miltenberger, 2024
-        <!-- <br>Menu links in 
-        <a href="https://kottke.org/plus/type/silkscreen/">
-        Silkscreen</a>, created by 
-        <a href="https://kottke.org/">
-        Jason Kottke</a> -->
-        <br>Text set in WinterSquash Regular, created by Yours, Truly
-        <br>All Rights Reserved
+        <br>Text, Images and Font "Elementary Bold" &#169; Ryan Miltenberger, 2025
     </footer>
 
-    <script>
-        // Enhanced modal functionality
-        function openModal(imageSrc) {
-            const modal = document.getElementById("myModal");
-            const modalImg = document.getElementById("modalImg");
-            modal.style.display = "block";
-            modalImg.src = imageSrc;
-            document.body.style.overflow = 'hidden'; // Prevent background scrolling
-            
-            // Close modal when clicking outside the image
-            modal.addEventListener('click', function(e) {
-                if (e.target === modal) {
-                    closeModal();
-                }
-            });
-
-            // Add keyboard support
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape') {
-                    closeModal();
-                }
-            });
-        }
-
-        function closeModal() {
-            const modal = document.getElementById("myModal");
-            modal.style.display = "none";
-            document.body.style.overflow = ''; // Restore scrolling
-        }
-
-        // Mobile menu toggle
-        document.querySelector('.mobile-menu-toggle')?.addEventListener('click', function() {
-            this.classList.toggle('active');
-            document.querySelector('.header-links').classList.toggle('active');
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

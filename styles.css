@@ -1,14 +1,25 @@
-@font-face {
+/* @font-face {
     font-family: 'WinterSquash';
     src: url('fonts/WinterSquash-Regular.woff2') format('woff2'),
          url('fonts/WinterSquash-Regular.woff') format('woff'),
          url('fonts/WinterSquash-Regular.otf') format('otf');
     font-weight: normal;
     font-style: normal;
+} */
+
+@font-face {
+    font-family: 'Elementary Bold';
+    src: url('fonts/ElementaryBold-Regular.woff2') format('woff2'),
+         url('fonts/ElementaryBold-Regular.woff') format('woff'),
+         url('fonts/ElementaryBold-Regular.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
 }
 
 /* Base styles - Mobile First */
 :root {
+    --background-color: #d6ffc9;
+    --text-color: #9e6c00;
     --primary-color: #1D3516;
     --accent-color: #FDB514;
     --hover-color: #19FE13;
@@ -17,10 +28,19 @@
     --header-height: 80px;
 }
 
+.dark-mode {
+    --background-color: #071f00;
+    --text-color: #ffdd95;
+}
+
+#theme-toggle {
+    all: unset;
+}
+
 body {
-    background-color: var(--primary-color);
-    font-family: "WinterSquash", sans-serif;
-    color: var(--accent-color);
+    background-color: var(--background-color);
+    font-family: "Elementary Bold", sans-serif;
+    color: var(--text-color);
     font-size: 16px;
     margin: 0;
     min-height: 100vh;
@@ -30,13 +50,13 @@ body {
 
 /* Typography */
 p {
-    font-family: "WinterSquash", sans-serif;
-    color: var(--accent-color);
+    font-family: "Elementary Bold", sans-serif;
+    color: var(--text-color);
     line-height: 1.5;
 }
 
 h2 {
-    color: var(--accent-color);
+    color: var(--text-color);
 }
 
 /* Links */
@@ -58,11 +78,11 @@ a:active {
 
 /* Header */
 header {
-    font-family: "WinterSquash", sans-serif;
+    font-family: "Elementary Bold", sans-serif;
     position: relative;
     width: 100%;
     padding: 0rem;
-    background-color: var(--primary-color);
+    background-color: var(--background-color);
 }
 
 .header-content {
@@ -94,6 +114,10 @@ header {
 
 /* Navigation */
 .header-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0;
     position: absolute;
     bottom: 25px;
     right: 30px;
@@ -109,7 +133,7 @@ header {
 /* Mobile Menu Toggle */
 .mobile-menu-toggle {
     display: none;
-    background: var(--primary-color);
+    background: var(--background-color);
     border: none;
     padding: 0rem;
     cursor: pointer;
@@ -162,7 +186,7 @@ header {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--primary-color);
+    background-color: var(--background-color);
     padding: 1rem;
 }
 
@@ -226,7 +250,8 @@ footer a {
 }
 
 .mobile-menu-toggle {
-    display: block;
+    display: flex;
+    margin: 100px;
 }
 
 .mobile-menu-toggle.active span:nth-child(1) {
