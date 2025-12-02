@@ -7,6 +7,12 @@ So far I've added a dark mode toggle, which broke some other stuff, but
 I plan on changing a lot more about the functionality and general 
 design.
 
+I am a designer and illustrator learning full-stack web development via
+[the Odin Project](https://theodinproject.com/) (which I highly
+recommend). Over time I plan to transition into creative software 
+development and UX. Meanwhile if anyone needs illustration or branding
+please reach out!
+
 ---
 
 **Check it out:**
